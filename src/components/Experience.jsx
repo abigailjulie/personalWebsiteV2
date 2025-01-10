@@ -59,7 +59,7 @@ export default function Experience() {
             </Row>
           </Container>
         </section>
-        <a className="cvLink" href="/AbigailFigaroResume.pdf" target="_blank" rel="noopener noreferrer"> View Full Resume <i className="bi bi-arrow-right-short"></i></a>
+        <a className="cvLink" href="/FigaroResume.pdf" target="_blank" rel="noopener noreferrer"> View Full Resume <i className="bi bi-arrow-right-short"></i></a>
       </div>
     </>
   )
