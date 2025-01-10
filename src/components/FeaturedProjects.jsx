@@ -3,7 +3,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import YelpCamp from "../assets/images/YelpCamp.jpg";
 import personalWebsite from "../assets/images/personalWebsite.jpg";
 import ProjectBadge from "./ProjectBadge";
-import Ecommerce from "../assets/images/Ecommerce.jpg";
+import Ecommerce from "../assets/images/ecommerceScreenshot.jpg";
 import { Link } from "react-router-dom";
 import "./FeaturedProjects.css";
 
