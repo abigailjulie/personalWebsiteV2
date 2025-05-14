@@ -52,7 +52,7 @@ const projects = [
     title: "Ecommerce Product Page",
     description:
       "E-commerce product page with lightbox product gallery and cart functionality",
-    badges: ["JavaScript", "React", "Bootstrap", "Vercel"],
+    badges: ["JavaScript", "React", "HTML", "CSS", "Bootstrap", "Vercel"],
   },
   {
     link: "https://github.com/abigailjulie/personalWebsiteV1",
@@ -61,7 +61,7 @@ const projects = [
     title: "Personal Website",
     description:
       "web application showcasing projects, with user authentication, and a time-based session management",
-    badges: ["JavaScript", "React", "Bootstrap", "Vercel"],
+    badges: ["JavaScript", "React", "HTML", "CSS", "Bootstrap", "Vercel"],
   },
   {
     link: "https://abigaildesignsyelpcamp.onrender.com",
