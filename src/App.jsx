@@ -17,6 +17,7 @@ import Auth from "./Auth";
 import Error from "./pages/Error";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer, Slide } from "react-toastify";
+import ScrollToTop from "./components/ScrollToTop";
 
 const TIMEOUT = 15 * 60 * 1000;
 
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <ErrorBoundary>
       <Router>
+        <ScrollToTop />
         <AppRoutes
           authenticated={authenticated}
           setAuthenticated={setAuthenticated}
