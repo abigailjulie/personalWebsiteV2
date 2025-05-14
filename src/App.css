@@ -1,4 +1,19 @@
-#root {
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+:root {
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -13,10 +28,13 @@ body {
   padding: 0;
   overflow-x: hidden;
   position: relative;
-  font-family: 'Oswald', "Arial Narrow", Arial, sans-serif;
+  font-family: "Oswald", "Arial Narrow", Arial, sans-serif;
   font-style: ExtraLight;
   font-weight: 200;
-  ;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 .pullDown {
@@ -48,7 +66,6 @@ body {
 }
 
 @media screen and (min-width: 780px) {
-
   .mobileName,
   .mobileHeading {
     display: none;

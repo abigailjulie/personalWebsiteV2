@@ -17,9 +17,8 @@ import Auth from "./Auth";
 import Error from "./pages/Error";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastContainer, Slide } from "react-toastify";
-import "./App.css";
 
-const TIMEOUT = 15 * 60 * 1000; // 15 minutes
+const TIMEOUT = 15 * 60 * 1000;
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
