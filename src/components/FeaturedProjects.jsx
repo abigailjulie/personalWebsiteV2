@@ -13,7 +13,8 @@ const projects = [
     imgSrc: Ecommerce,
     imgAlt: "snapshot of ecommerce product page",
     title: "Ecommerce Product Page",
-    description: "E-commerce product page with lightbox product gallery and cart functionality",
+    description:
+      "E-commerce product page with lightbox product gallery and cart functionality",
     badges: ["Javascript", "React", "Bootstrap", "Vercel"],
   },
   {
@@ -21,7 +22,8 @@ const projects = [
     imgSrc: personalWebsite,
     imgAlt: "snapshot of personal website home page",
     title: "Personal Website",
-    description: "web application showcasing projects, with user authentication, and a time-based session management",
+    description:
+      "web application showcasing projects, with user authentication, and a time-based session management",
     badges: ["Javascript", "React", "Bootstrap", "Vercel"],
   },
   {
@@ -29,7 +31,8 @@ const projects = [
     imgSrc: YelpCamp,
     imgAlt: "snapshot of YelpCamp home page",
     title: "YelpCamp",
-    description: "blog application allowing users to create, review, and explore campgrounds with interactive maps powered by Mapbox, along with responsive design and user authentication features",
+    description:
+      "blog application allowing users to create, review, and explore campgrounds with interactive maps powered by Mapbox, along with responsive design and user authentication features",
     badges: ["Javascript", "Node.js", "Express", "MongoDB", "Render"],
   },
 ];
@@ -73,10 +76,6 @@ export default function FeaturedProjects() {
           </ul>
         </section>
         <div className="featProjLinks">
-          <Link className="link" to="/projects/software">
-            View Software Projects Archive
-            <i className="bi bi-arrow-right-short"></i>
-          </Link>
           <Link className="link" to="/projects/architecture">
             View Architecture Projects Archive
             <i className="bi bi-arrow-right-short"></i>

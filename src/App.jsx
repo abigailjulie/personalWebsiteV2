@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
-import ProjectsSoft from "./pages/ProjectsSoft";
 import ProjectsArch from "./pages/ProjectsArch";
 import OMH from "./pages/OMH";
 import Penn1 from "./pages/Penn1";
@@ -35,7 +39,12 @@ const App = () => {
   );
 };
 
-const AppRoutes = ({ authenticated, setAuthenticated, loginCount, setLoginCount }) => {
+const AppRoutes = ({
+  authenticated,
+  setAuthenticated,
+  loginCount,
+  setLoginCount,
+}) => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,7 +53,7 @@ const AppRoutes = ({ authenticated, setAuthenticated, loginCount, setLoginCount 
       const isAuthenticated = localStorage.getItem("authenticated") === "true";
 
       if (isAuthenticated) {
-        if (lastActivity && (Date.now() - parseInt(lastActivity)) > TIMEOUT) {
+        if (lastActivity && Date.now() - parseInt(lastActivity) > TIMEOUT) {
           localStorage.removeItem("authenticated");
           localStorage.removeItem("lastActivity");
           setAuthenticated(false);
@@ -81,7 +90,7 @@ const AppRoutes = ({ authenticated, setAuthenticated, loginCount, setLoginCount 
 
   useEffect(() => {
     if (loginCount >= 5) {
-      navigate('/contact');
+      navigate("/contact");
       setLoginCount(0);
     }
   }, [loginCount, navigate]);
@@ -90,17 +99,81 @@ const AppRoutes = ({ authenticated, setAuthenticated, loginCount, setLoginCount 
     <div>
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={authenticated ? <Home /> : <Auth onAuthenticated={() => {
-          setAuthenticated(true);
-          setLoginCount(prev => prev + 1);
-        }} />} />
-        <Route path="/home" element={<ProtectedRoute element={<Home />} authenticated={authenticated} redirectPath="/home" />} />
-        <Route path="/projects/software" element={<ProtectedRoute element={<ProjectsSoft />} authenticated={authenticated} redirectPath="/projects/software" />} />
-        <Route path="/projects/architecture" element={<ProtectedRoute element={<ProjectsArch />} authenticated={authenticated} redirectPath="/projects/architecture" />} />
-        <Route path="/projects/architecture/OMH" element={<ProtectedRoute element={<OMH />} authenticated={authenticated} redirectPath="/projects/architecture/OMH" />} />
-        <Route path="/projects/architecture/Penn1" element={<ProtectedRoute element={<Penn1 />} authenticated={authenticated} redirectPath="/projects/architecture/Penn1" />} />
-        <Route path="/projects/architecture/ThirdPoint" element={<ProtectedRoute element={<ThirdPoint />} authenticated={authenticated} redirectPath="/projects/architecture/ThirdPoint" />} />
-        <Route path="/projects/architecture/CampusCanal" element={<ProtectedRoute element={<CampusCanal />} authenticated={authenticated} redirectPath="/projects/architecture/CampusCanal" />} />
+        <Route
+          path="/"
+          element={
+            authenticated ? (
+              <Home />
+            ) : (
+              <Auth
+                onAuthenticated={() => {
+                  setAuthenticated(true);
+                  setLoginCount((prev) => prev + 1);
+                }}
+              />
+            )
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute
+              element={<Home />}
+              authenticated={authenticated}
+              redirectPath="/home"
+            />
+          }
+        />
+        <Route
+          path="/projects/architecture"
+          element={
+            <ProtectedRoute
+              element={<ProjectsArch />}
+              authenticated={authenticated}
+              redirectPath="/projects/architecture"
+            />
+          }
+        />
+        <Route
+          path="/projects/architecture/OMH"
+          element={
+            <ProtectedRoute
+              element={<OMH />}
+              authenticated={authenticated}
+              redirectPath="/projects/architecture/OMH"
+            />
+          }
+        />
+        <Route
+          path="/projects/architecture/Penn1"
+          element={
+            <ProtectedRoute
+              element={<Penn1 />}
+              authenticated={authenticated}
+              redirectPath="/projects/architecture/Penn1"
+            />
+          }
+        />
+        <Route
+          path="/projects/architecture/ThirdPoint"
+          element={
+            <ProtectedRoute
+              element={<ThirdPoint />}
+              authenticated={authenticated}
+              redirectPath="/projects/architecture/ThirdPoint"
+            />
+          }
+        />
+        <Route
+          path="/projects/architecture/CampusCanal"
+          element={
+            <ProtectedRoute
+              element={<CampusCanal />}
+              authenticated={authenticated}
+              redirectPath="/projects/architecture/CampusCanal"
+            />
+          }
+        />
         {/* Unauthenticated route */}
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
