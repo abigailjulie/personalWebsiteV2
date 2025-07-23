@@ -11,12 +11,12 @@ import "./FeaturedProjects.css";
 
 const projects = [
   {
-    link: "https://github.com/abigailjulie/ArtFeenClientPortal",
+    link: "https://the-archway.onrender.com/",
     imgSrc: ArchWay,
     imgAlt: "snapshot of the ArchWay home page",
     title: "The ArchWay",
     description:
-      "A role-based web app that streamlines architect–client collaboration by centralizing timelines, budgets, and project phases in a single dashboard. Built with a custom backend API to manage dynamic project lifecycles and real-time updates. Designed for extensibility, with Twilio integration enabling automated milestone notifications, aiming to reduce project delays by up to 30%.",
+      "A full stack project management platform using MERN stack with Redux Toolkit/RTK Query, 15+ React components, and role-based authentication reducing server requests by 70% through intelligent caching and state normalization. Optimized database performance using MongoDB lean() queries and selective field population, improving API response times by 40% and reducing data transfer by 60%.",
     badges: [
       "TypeScript",
       "React",
